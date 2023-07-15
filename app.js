@@ -24,6 +24,7 @@ app.post('/portfolio/sendmail', async (req, res) => {
         return res.status(200).json({'message': 'Email sent successfully!'});
     }
     catch (err) {
+        console.log(err);
         return res.status(500).json({'message': 'Error sending email!'});
     }
 })
